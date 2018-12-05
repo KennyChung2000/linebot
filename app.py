@@ -16,14 +16,14 @@ from linebot.models import *
 
 app = Flask(__name__)
 
-ACCESS_TOKEN= os.environ['tOR/2oUKn8BjvGQ7io0DnmzT7syR+tTafBPNyNqHW/zt/B5xQEOk1McUfjdub1Gw6E0OIRDGCgF0bMamYbqtJCV4184s9wmL7/tIowDZFMAx/uv/sjseP9SG+28qebRMMxI4W2SxTRC7g/t0Y1Vf3QdB04t89/1O/w1cDnyilFU=
-']
+ACCESS_TOKEN= os.environ['tOR/2oUKn8BjvGQ7io0DnmzT7syR+tTafBPNyNqHW/zt/B5xQEOk1McUfjdub1Gw6E0OIRDGCgF0bMamYbqtJCV4184s9wmL7/tIowDZFMAx/uv/sjseP9SG+28qebRMMxI4W2SxTRC7g/t0Y1Vf3QdB04t89/1O/w1cDnyilFU=']
 SECRET= os.environ['0b951648039451063a36ff0d4ea59284']
 
 # Channel Access Token
-line_bot_api = LineBotApi(ACCESS_TOKEN)
+line_bot_api = LineBotApi(tOR/2oUKn8BjvGQ7io0DnmzT7syR+tTafBPNyNqHW/zt/B5xQEOk1McUfjdub1Gw6E0OIRDGCgF0bMamYbqtJCV4184s9wmL7/tIowDZFMAx/uv/sjseP9SG+28qebRMMxI4W2SxTRC7g/t0Y1Vf3QdB04t89/1O/w1cDnyilFU=
+)
 # Channel Secret
-handler = WebhookHandler(SECRET)
+handler = WebhookHandler(0b951648039451063a36ff0d4ea59284)
 
 pm_site = {}
 
