@@ -56,7 +56,7 @@ def keyword_reply(received_text)
 
   # Line Bot API 物件初始化
   def line
-    @line ||= Line::Bot::Client.new { |config|
+    @line || = Line::Bot::Client.new { |config|
       config.channel_secret = 'fc723574f9564db2a10e9293d9f127ff'
       config.channel_token = 'lKpgxgaTlnghUbuHFY+V8EPS+rnH9SDCrqB86vtovNxm8PgbfMV8vYJ433zCk6okY4tnzmRoNjnEnauhWzzQlrj9hy/ZS3IwYRAm7CfraIk7JGrWk0DY9Sr/7v86oQesd1mVVV5YkuR3FZKZXZh11AdB04t89/1O/w1cDnyilFU='
     }
