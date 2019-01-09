@@ -63,7 +63,7 @@ def handle_message(event):
     
     # query THU courses
     if '地震' in _token[0] or '地' in _token[0]:
-         _message = "https://www.cwb.gov.tw/V7/"    #reply course
+         _message = _message = TextSendMessage(text="https://www.cwb.gov.tw/V7/")    #reply course
          line_bot_api.reply_message(event.reply_token, _message)
 #            line_bot_api.push_message(event.source.user_id, TextSendMessage(text='123'))
     elif '誠品' in _token[0] or '書單' in _token[0]:
