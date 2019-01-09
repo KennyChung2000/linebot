@@ -62,11 +62,9 @@ def handle_message(event):
     _low_token = _token[0].lower()
     
     # query THU courses
-    if '課程' in _token[0] or '課表' in _token[0]:
-        cls_list = getCls(_token[1])
-        for cls in cls_list:
-            _message = TextSendMessage(text=cls)    #reply course
-            line_bot_api.reply_message(event.reply_token, _message)
+    if '地震' in _token[0] or '地' in _token[0]:
+         _message = "https://www.cwb.gov.tw/V7/"    #reply course
+         line_bot_api.reply_message(event.reply_token, _message)
 #            line_bot_api.push_message(event.source.user_id, TextSendMessage(text='123'))
     elif '誠品' in _token[0] or '書單' in _token[0]:
         bookls = find_bookls(_token[1])
