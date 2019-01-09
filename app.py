@@ -69,6 +69,19 @@ def handle_message(event):
     elif '全球地震' in _token[0] or '全球地震' in _token[0]:
        _message = _message = TextSendMessage(text="https://www.cwb.gov.tw/V7/earthquake/quake_world.htm")    #reply course
        line_bot_api.reply_message(event.reply_token, _message)
+    elif '紫外線' in _token[0] or '紫外線' in _token[0]:
+        _message = _message = TextSendMessage(text="https://www.cwb.gov.tw/V7/observe/UVI/UVI.htm")    #reply course
+        line_bot_api.reply_message(event.reply_token, _message)
+    elif '雨量' in _token[0] or '雨量' in _token[0]:
+        _message = _message = TextSendMessage(text="https://www.cwb.gov.tw/V7/observe/rainfall/hk.htm")    #reply course
+        line_bot_api.reply_message(event.reply_token, _message)
+    elif '停水' in _token[0] or '停水' in _token[0]:
+        _message = _message = TextSendMessage(text="https://wateroff.water.gov.tw/index_h.phtml")    #reply course
+        line_bot_api.reply_message(event.reply_token, _message)
+    elif '停電' in _token[0] or '停電' in _token[0]:
+        _message = _message = TextSendMessage(text="https://nds.taipower.com.tw/ndsWeb/ndft112.aspx")    #reply course
+        line_bot_api.reply_message(event.reply_token, _message)
+    elif '!h' in _token[0] or '!help' in _token[0]:
     elif '空氣' in _token[0] or 'pm2' in _low_token:
         # query PM2.5
         for _site in pm_site:
