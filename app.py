@@ -64,20 +64,20 @@ def handle_message(event):
     # query THU courses
     if '地震' in _token[0] or '地' in _token[0]:
          _message = _message = TextSendMessage(text="https://www.cwb.gov.tw/V7/")    #reply course
-           line_bot_api.reply_message(event.reply_token, _message)
+         line_bot_api.reply_message(event.reply_token, _message)
 #            line_bot_api.push_message(event.source.user_id, TextSendMessage(text='123'))
     elif '全球地震' in _token[0] or '全球地震' in _token[0]:
        _message = _message = TextSendMessage(text="https://www.cwb.gov.tw/V7/earthquake/quake_world.htm")    #reply course
-        line_bot_api.reply_message(event.reply_token, _message)
+       line_bot_api.reply_message(event.reply_token, _message)
     elif '空氣' in _token[0] or 'pm2' in _low_token:
         # query PM2.5
         for _site in pm_site:
             if _site == _token[1]:
                 _message = TextSendMessage(text=pm_site[_site]) #reply pm2.5 for the site
-                 line_bot_api.reply_message(event.reply_token, _message)
+                line_bot_api.reply_message(event.reply_token, _message)
                 break
         _message = TextSendMessage(text="請輸入:課程, 誠品, 空氣 + <關鍵字>")
-         line_bot_api.reply_message(event.reply_token, _message)
+        line_bot_api.reply_message(event.reply_token, _message)
     else:
         search_result = get_search_engine(_token[0], 3)
         reply = "您所搜尋的結果為：\n"
