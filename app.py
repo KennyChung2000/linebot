@@ -69,7 +69,6 @@ def handle_message(event):
     elif '全球地震' in _token[0] or '全球地震' in _token[0]:
        _message = _message = TextSendMessage(text="https://www.cwb.gov.tw/V7/earthquake/quake_world.htm")    #reply course
        line_bot_api.reply_message(event.reply_token, _message)
-    elif '!h' in _token[0] or '!help' in _token[0]:
     elif '空氣' in _token[0] or 'pm2' in _low_token:
         # query PM2.5
         for _site in pm_site:
