@@ -107,7 +107,7 @@ def find_bookls(kw):
     return ans
 
 def loadPMJson():
-    with urllib.request.urlopen("http://opendata2.epa.gov.tw/AQX.json") as url:
+    with urllib.request.urlopen("http://opendata2.epa.gov.tw/AQI.json") as url:
         data = json.loads(url.read().decode())
         for ele in data:
             pm_site[ele['SiteName']] = ele['PM2.5']
