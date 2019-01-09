@@ -16,10 +16,8 @@ from linebot.models import *
 
 app = Flask(__name__)
 
-ACCESS_TOKEN= os.environ['KpgxgaTlnghUbuHFY+V8EPS+rnH9SDCrqB86vtovNxm8PgbfMV8vYJ433zCk6okY4tnzmRoNjnEnauhWzzQlrj9hy/ZS3IwYRAm7CfraIk7JGrWk0DY9Sr/7v86oQesd1mVVV5YkuR3FZKZXZh11AdB04t89/1O/w1cDnyilFU=
-']
-SECRET= os.environ['fc723574f9564db2a10e9293d9f127ff
-']
+ACCESS_TOKEN= os.environ['ACCESS_TOKEN']
+SECRET= os.environ['CHANNEL_SECRET']
 
 # Channel Access Token
 line_bot_api = LineBotApi(ACCESS_TOKEN)
@@ -64,8 +62,10 @@ def handle_message(event):
     _low_token = _token[0].lower()
     
     # query THU courses
-    if '地震' in _token[0] or '地牛翻身' in _token[0]:
-            _message = " https://www.cwb.gov.tw/V7/ "
+    if '課程' in _token[0] or '課表' in _token[0]:
+        cls_list = getCls(_token[1])
+        for cls in cls_list:
+            _message = TextSendMessage(text=cls)    #reply course
             line_bot_api.reply_message(event.reply_token, _message)
 #            line_bot_api.push_message(event.source.user_id, TextSendMessage(text='123'))
     elif '誠品' in _token[0] or '書單' in _token[0]:
